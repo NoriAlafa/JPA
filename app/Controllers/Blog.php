@@ -12,8 +12,16 @@ class Blog extends BaseController
     public function index()
     {
         $data = [
-            'blog'  => $this->BlogModel->findAll()
+            'blog'  => $this->BlogModel->getBlog()
         ];
         return view('blog/blog',$data);
+    }
+
+    public function detail($slug){
+        $blog  = $this->BlogModel->getBlog($slug);
+        $data = [
+            'blog'  => $blog
+        ];
+        return view('blog/blog_detail',$data);
     }
 }
