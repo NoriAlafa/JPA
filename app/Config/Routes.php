@@ -33,7 +33,13 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->get('/materi', 'Blog::index');
+$routes->get('/login', 'Auth::index');
+$routes->post('/cek_login', 'Auth::cek_login');
 $routes->get('/detail/materi/(:segment)', 'Blog::detail/$1');
+
+
+$routes->post('/daftar','Auth::register');
+$routes->get('/reg','Auth::viewReg');
 
 /*
  * --------------------------------------------------------------------
