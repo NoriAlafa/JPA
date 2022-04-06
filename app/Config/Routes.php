@@ -31,15 +31,22 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
+
+//materi
 $routes->get('/', 'Home::index');
 $routes->get('/materi', 'Blog::index');
-$routes->get('/login', 'Auth::index');
-$routes->post('/cek_login', 'Auth::cek_login');
 $routes->get('/detail/materi/(:segment)', 'Blog::detail/$1');
 
-
+//auth
+$routes->get('/login', 'Auth::index');
+$routes->post('/cek_login', 'Auth::cek_login');
 $routes->post('/daftar','Auth::register');
 $routes->get('/reg','Auth::viewReg');
+
+//admin
+$routes->get('/tampil/materi', 'Admin::listMateri');
+$routes->get('/tambah/materi', 'Admin::index');
+$routes->post('/post/materi', 'Admin::insert');
 
 /*
  * --------------------------------------------------------------------
