@@ -24,4 +24,8 @@ class Blog extends BaseController
         ];
         return view('blog/blog_detail',$data);
     }
+
+    public function class(){
+        return view('class/class');
+    }
 }

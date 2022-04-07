@@ -32,6 +32,11 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 
+
+
+//class
+$routes->get('/class', 'Blog::class');
+
 //materi
 $routes->get('/', 'Home::index');
 $routes->get('/materi', 'Blog::index');
