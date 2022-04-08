@@ -27,12 +27,13 @@
                                 <img src="<?=$blog['img']?>" class="img-fluid rounded-2 img-thumbnail" >
                             </div>
                             <br/>
-                            <div class="content mt-md-3 col-md-9" style="margin-left:10%;font-family: 'Source Code Pro', monospace;color:black;">
+                            <div class="content mt-md-3 col-md-9" id="contoh-kata" style="margin-left:10%;font-family: 'Source Code Pro', monospace;color:black;">
+                                <h4 class="text-center">CONTOH KATA</h4>
                                 <p><?= $blog['penjelasan'] ?></p>
                             </div>
                         </div>
                         <br/>
-                        <div id="contoh-kata" class="text-center rounded-3" style="background-color:#dee2e6;color:black;">
+                        <div  class="text-center rounded-3 col-md-12" style="background-color:#dee2e6;color:black;">
                             <?=$blog['content']?>
                         </div>
                     </div>
