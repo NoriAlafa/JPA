@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 08, 2022 at 04:59 AM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 7.3.31
+-- Generation Time: Apr 11, 2022 at 05:12 AM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 7.4.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -49,6 +49,21 @@ INSERT INTO `tb_blog` (`id_blog`, `judul`, `slug`, `pre-content`, `penjelasan`, 
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tb_guru`
+--
+
+CREATE TABLE `tb_guru` (
+  `id_guru` int(11) NOT NULL,
+  `nama_guru` varchar(50) NOT NULL,
+  `sektor` varchar(20) NOT NULL,
+  `materi` varchar(20) NOT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tb_user`
 --
 
@@ -81,6 +96,12 @@ ALTER TABLE `tb_blog`
   ADD PRIMARY KEY (`id_blog`);
 
 --
+-- Indexes for table `tb_guru`
+--
+ALTER TABLE `tb_guru`
+  ADD PRIMARY KEY (`id_guru`);
+
+--
 -- Indexes for table `tb_user`
 --
 ALTER TABLE `tb_user`
@@ -95,6 +116,12 @@ ALTER TABLE `tb_user`
 --
 ALTER TABLE `tb_blog`
   MODIFY `id_blog` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `tb_guru`
+--
+ALTER TABLE `tb_guru`
+  MODIFY `id_guru` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tb_user`
